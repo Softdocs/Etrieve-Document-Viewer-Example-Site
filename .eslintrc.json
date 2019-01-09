@@ -1,0 +1,44 @@
+{
+  "extends": "./node_modules/aurelia-tools/.eslintrc.json",
+  "parserOptions": {
+      "ecmaFeatures": {
+          "legacyDecorators": true
+      }
+  },
+  "plugins": [
+      "aurelia",
+      "no-unsanitized"
+  ],
+  "rules": {
+      "eqeqeq": "off",
+      "indent": ["warn", 4, {
+          "SwitchCase": 1
+      }],
+      "semi": [
+          "warn",
+          "always"
+      ],
+      "quotes": "off",
+      "no-unsanitized/method": "error",
+      "no-unsanitized/property": "error",
+      "no-multi-str": "off",
+      "no-console": "error",
+      "no-cond-assign": "off",
+      "no-loop-func": "off",
+      "no-eq-null": "off",
+      "padded-blocks": 0,
+      "new-cap": [2, {
+          "capIsNew": false
+      }],
+      "dot-notation": "warn",
+      "space-before-blocks": "warn",
+      "space-before-function-paren": "off",
+      "one-var": 0,
+      "no-var": "warn",
+      "radix": [2, "as-needed"],
+      "aurelia/inject-type": [2, "decorator"],
+      "aurelia/inject-matches-ctor": 2,
+      "aurelia/no-conventions": 0,
+      "aurelia/no-console-log": 0
+  }
+}

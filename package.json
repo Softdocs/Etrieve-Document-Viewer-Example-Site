@@ -1,0 +1,60 @@
+{
+  "name": "document-viewer-test-site",
+  "description": "An Aurelia client application.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "???",
+    "url": "???"
+  },
+  "scripts": {
+    "run": "au run",
+    "run-watch": "au run --watch",
+    "build": "au build",
+    "build-production": "au build --env prod",
+    "test": "au test --headless"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aurelia-animator-css": "^1.0.4",
+    "aurelia-bootstrapper": "^2.3.0",
+    "aurelia-fetch-client": "^1.6.0",
+    "requirejs": "^2.3.6",
+    "text": "github:requirejs/text#latest"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "aurelia-cli": "^1.0.0-beta.3",
+    "aurelia-testing": "^1.0.0",
+    "aurelia-tools": "^2.0.0",
+    "babel-eslint": "^10.0.1",
+    "browser-sync": "^2.26.0",
+    "connect-history-api-fallback": "^1.5.0",
+    "debounce": "^1.2.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-changed-in-place": "^2.3.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.1",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-babel-preprocessor": "^8.0.0-beta.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "minimatch": "^3.0.4",
+    "through2": "^2.0.3",
+    "vinyl-fs": "^3.0.3"
+  }
+}

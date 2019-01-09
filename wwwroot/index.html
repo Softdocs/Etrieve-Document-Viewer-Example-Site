@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Etrieve Document Viewer Test Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- For Development Use -->
+        <!-- <script type="module" src="initializer/initialize.js"></script> -->
+        <!-- <script type="module" src="/api/api.js"></script> -->
+        <!-- End Development Use -->
+
+
+        <!--
+            Load up a pre-made Api client to connect to the Etrieve Content Api.
+            This will place the EtrieveApi class on the window to be used.
+            Since the api is a module class, you can choose to import the file
+                and use the EtrieveApi via imports instead of the global window.
+        -->
+        <script type="module" src="https://etrieve-document-viewer.azureedge.net/api/api.js"></script>
+
+        <!--
+            Load up the initializer script for the Etrieve Document Viewer.
+            It's important to load this early so that any custom elements used will be ready immediately.
+        -->
+        <script type="module" src="https://etrieve-document-viewer.azureedge.net/initializer/initialize.js"></script>
+
+    </head>
+
+    <body aurelia-app="main">
+        <!--
+            For this example site, we're using a basic Aurelia site (https://aurelia.io/).
+            You can use any framework (or no framework) for your site.
+        -->
+        <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+   "client_id": "3ec88c12-c679-4494-bf43-7c353391074f",
+   "secret": "OpDyKY+dhDteceBUc75xTm/LJ39Z/eDr75LOHz4um4p/2yiP",
+   "content_api": "https://etrieve-api-content.azurewebsites.net/",
+   "security_api": "https://etrieve-api-security.azurewebsites.net/"
+}

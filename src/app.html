@@ -1,0 +1,44 @@
+<template>
+    <!--
+        Load up some CSS to help organize the page
+    -->
+    <require from="./app.css"></require>
+
+    <section class="container">
+
+        <div class="search">
+            <!--
+                Here we have a few fields we use to provide some simple search capabilities.
+                There are change events that trigger functions in our view model.
+                Query and Fields are both tied into the same search functionality, so their change events trigger the same function.
+                The Document ID input is tied to search specifically by a document id, and therefore has it's own trigger function.
+
+                The 'bind' and 'trigger' syntax are Aurelia's binding language, and provides a means to which to bind values between view and view model,
+                    as well as trigger specific functions based off change events (https://aurelia.io/docs/binding/basics)
+            -->
+            <label for="query">Query</label>
+            <input id="query" value.bind="query" change.trigger="searchDocuments()" />
+            <br />
+            <label for="fields">Fields</label>
+            <input id="fields" value.bind="fields" change.trigger="searchDocuments()" />
+            <br />
+            <label for="docId">Document ID</label>
+            <input id="docId" value.bind="docId" change.trigger="getDocumentById()" />
+            <br />
+
+            <!--
+                Our prettified text to show the response from the server
+            -->
+            <pre>${metadataResponse}</pre>
+        </div>
+
+        <div class="viewer">
+            <!--
+                Here we have our Etrieve Viewer Element. We've added an ID just to help easily find it.
+            -->
+            <etrieve-viewer id="viewerElement"></etrieve-viewer>
+        </div>
+
+    </section>
+
+</template>
