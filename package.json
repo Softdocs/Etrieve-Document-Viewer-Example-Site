@@ -1,10 +1,10 @@
 {
   "name": "document-viewer-test-site",
-  "description": "An Aurelia client application.",
-  "version": "0.1.0",
+  "description": "An example site to demonstrate the Etrieve Document Viewer",
+  "version": "1.0.0",
   "repository": {
-    "type": "???",
-    "url": "???"
+    "type": "git",
+    "url": "https://softdocs.visualstudio.com/Etrieve/_git/Etrieve-Document-Viewer-Example-Site"
   },
   "scripts": {
     "run": "au run",

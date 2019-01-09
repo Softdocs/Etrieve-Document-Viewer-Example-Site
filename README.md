@@ -12,6 +12,11 @@
       - [Opening a Document via Metadata](#opening-a-document-via-metadata)
       - [Getting Document Metadata / Using the Etrieve Api](#getting-document-metadata--using-the-etrieve-api)
 
+---
+A demo of this site can be found at [https://etrieve-document-viewer-test.azurewebsites.net](https://etrieve-document-viewer-test.azurewebsites.net).
+
+---
+
 All commands take place using a terminal (Powershell, Command Line, Terminal, or CLI of your choice), and are run inside the root directory of the site.
 
 ## Example Site Setup
