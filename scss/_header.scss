@@ -1,0 +1,175 @@
+@import './_variables.scss';
+@import './_mixins/_mixins.scss';
+/*Header Variables*/
+$header-color: $app-gray;
+$header-bg-color: white;
+$header-height: 3rem;
+
+$header-bg-color-dark: $app-gray;
+$header-color-dark: whitesmoke;
+
+$header-bg-color-action: $action;
+$header-color-action: set-color-from-bg($header-bg-color-action);
+
+/*doc
+---
+title: Header
+name: header
+category: components
+---
+### Basic Header
+The basic building blocks needed to create a header are an element with the class `etrieve-header`.
+Inside the `etrieve-header` element, we have a `bar` which contains the different parts that make up the header.
+
+```html_example
+<header class="etrieve-header">
+    <div class="bar">
+        <div class="bar-center">My Header</div>
+    </div>
+</header>
+```
+If you want the header fixed to the top of the screen, apply the class `fixed-top` to the header element.
+
+### Header Parts
+The header is split into 3 parts:
+
+* `bar-left`
+* `bar-center`
+* `bar-right`
+
+It is worthy of note that the `bar-center` class will align to the left side of the header on non-mobile devices, just right of the `bar-left` element (if one exists).
+On mobile (or small screen devices) it will center the content.
+
+```html_example
+<header class="etrieve-header">
+    <div class="bar">
+        <div class="bar-left">L</div>
+        <div class="bar-right">Right</div>
+        <div class="bar-center">Center</div>
+    </div>
+</header>
+```
+
+### Header Styles
+The header can be used in 3 different styles.
+
+* Default
+* Action
+* Dark
+
+The default style needs no extra classes. To style the header with either the action color or the dark theme, just add the class `.action` or `.dark` respectively
+
+```html_example
+<header class="etrieve-header action">
+    <div class="bar">
+        <div class="bar-left">L</div>
+        <div class="bar-right">Right</div>
+        <div class="bar-center">Center</div>
+    </div>
+</header>
+```
+
+```html_example
+<header class="etrieve-header dark">
+    <div class="bar">
+        <div class="bar-left">L</div>
+        <div class="bar-right">Right</div>
+        <div class="bar-center">Center</div>
+    </div>
+</header>
+```
+### Brand
+
+The `brand` class is used to style a div such that it becomes the centerpiece of the header.
+
+```html_example
+<header class="etrieve-header">
+    <div class="bar">
+        <div class="bar-center">
+            <div class="brand">My Brand</div>
+        </div>
+    </div>
+</header>
+```
+*/
+.etrieve-header{
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-height;
+    min-height: $header-height;
+    background-color: $header-bg-color;
+    color: $header-color;
+
+    fill: $header-color; //Used for filling SVG
+
+    &.action {
+        background-color: $header-bg-color-action;
+        color: $header-color-action;
+        fill: $header-color-action; //Used for filling SVG
+    }
+    &.dark {
+        background-color: $header-bg-color-dark;
+        color: $header-color-dark;
+        fill: $header-color-dark; //Used for filling SVG
+    }
+
+    &.fixed-top {
+        position: fixed;
+    }
+
+    .bar {
+        padding: 0 .5rem;
+    }
+    %bar-component {
+        padding: .8rem .5rem;
+        height: $header-height;
+        background: none;
+        border: none;
+        box-sizing: border-box;
+
+        svg {
+            vertical-align: baseline;
+        }
+    }
+    .bar-left{
+        @extend %bar-component;
+        float: left;
+    }
+    .bar-right{
+        @extend %bar-component;
+        float: right;
+    }
+    .bar-center{
+        @extend %bar-component;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin: 0 3rem;
+    }
+    .brand{
+        font-size: 1.25rem;
+        // margin-top: -.25rem;
+        display: block;
+    }
+
+    //Extra Small devices (Default - portrait phones)
+    @media (min-width: 34em){
+        //Small devices (landscape phones)
+
+    }
+    @media (min-width: 48em){
+        //Medium devices (tablets)
+        .bar-center{
+            text-align: left;
+            margin: auto;
+        }
+    }
+    @media (min-width: 62em){
+        //Large devices (desktop & up)
+
+    }
+
+}

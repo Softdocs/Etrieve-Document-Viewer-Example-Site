@@ -1,0 +1,160 @@
+@import './_mixins/_mixins.scss';
+
+/*Colors*/
+/*Primary Colors*/
+$off-white: #ebebeb !default;
+$app-gray: rgb(55,55,55) !default;
+$app-dark: rgb(31,31,31) !default;
+$action-blue: rgb(43, 64, 112) !default;
+$action: #7f4293 !default;//#B1CB23 !default;//#7f4293 !default;//rgb(89, 29, 109) !default;
+
+$error: rgb(232, 76, 60);
+$warning: rgb(243, 112, 48);
+$success: #277542;
+$info: rgb(85,92,149);
+
+/*Accent Colors*/
+$accent-gray: accent-lighten-slight($app-gray);//#4b4b4b !default;
+$accent-white: accent-darken-slight($off-white) !default;
+$accent: accent-tint($action) !default; //219, 210, 222???
+$accent-dark: accent-darken($accent) !default;
+$accent-blue: accent-lighten($action-blue) !default;
+$accent-bright-blue: #66a8ec !default;
+$accent-dark-blue: rgb(29, 101, 162) !default;
+
+/*Application Colors*/
+$content-color: #008287;
+$security-color: #9A9696;
+
+
+/*doc
+---
+title: Colors
+name: colors
+category: basics
+---
+
+### Background Colors
+There are a few different colors that we use across Etrieve.
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-app-gray"></div>
+            <code>App Gray</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-app-dark"></div>
+            <code>App Dark</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-off-white"></div>
+            <code>Off White</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-action"></div>
+            <code>Action</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-action-blue"></div>
+            <code>Action Blue</code>
+        </div>
+    </div>
+</div>
+
+### Type Colors
+`action-blue` should _only_ be used on text that is actionable. For example, links, or buttons can have `action-blue`, but a paragraph that describes something should not.
+When using the `app-gray` as a background, `off-white` should be used for the text color (vice versa).
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-app-gray"></div>
+            <code>App Gray</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-app-dark"></div>
+            <code>App Dark</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-off-white"></div>
+            <code>Off White</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-action"></div>
+            <code>Action</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-action-blue"></div>
+            <code>Action Blue</code>
+        </div>
+    </div>
+</div>
+
+### Status Colors
+There are a few different colors that we use across Etrieve to indicate status's.
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-status-success"></div>
+            <code>Success</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-status-warning"></div>
+            <code>Warning</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-status-error"></div>
+            <code>Error</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-status-info"></div>
+            <code>Info</code>
+        </div>
+    </div>
+</div>
+
+### Accent Colors
+Accented elements are those which have a _temporary_ style applied to it to help draw attention to it.
+Accent colors should be used for things like hover/active/focus states, or similar situations where the intent is to accent an element.
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-gray"></div>
+            <code>Accent Gray</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-white"></div>
+            <code>Accent White</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent"></div>
+            <code>Accent</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-dark"></div>
+            <code>Accent Dark</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-blue"></div>
+            <code>Accent Blue</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-bright-blue"></div>
+            <code>Accent Bright Blue</code>
+        </div>
+        <div class="col-md-2 color-desc">
+            <div class="color-swatch bg-accent-dark-blue"></div>
+            <code>Accent Dark Blue</code>
+        </div>
+    </div>
+</div>
+*/
+
+
+
+
+/*fonts*/
+$font-family: 'Segoe UI', Helvetica, Arial, sans-serif;

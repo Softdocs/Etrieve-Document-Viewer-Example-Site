@@ -1,0 +1,43 @@
+@function set-color-from-bg($bgcolor) {
+    @if (lightness( $bgcolor ) > 60) { //60 for purple action color, 46 for chartreuse 
+      @return $app-gray;
+    }
+    @else {
+      @return $off-white;
+    }
+}
+
+@function accent-lighten($color){
+  @return lighten($color, 65);
+}
+@function accent-tint($color){
+  @return tint($color, 80%);
+}
+@function accent-lighten-slight($color){
+  @return lighten($color, 10);
+}
+
+@function accent-darken($color){
+  @return darken($color, 50);
+}
+@function accent-darken-slight($color){
+  @return darken($color, 10);
+}
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}

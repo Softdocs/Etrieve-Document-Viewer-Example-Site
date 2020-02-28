@@ -4,40 +4,74 @@
     -->
     <require from="./app.css"></require>
 
-    <section class="container">
-
-        <div class="search">
-            <!--
-                Here we have a few fields we use to provide some simple search capabilities.
-                There are change events that trigger functions in our view model.
-                Query and Fields are both tied into the same search functionality, so their change events trigger the same function.
-                The Document ID input is tied to search specifically by a document id, and therefore has it's own trigger function.
-
-                The 'bind' and 'trigger' syntax are Aurelia's binding language, and provides a means to which to bind values between view and view model,
-                    as well as trigger specific functions based off change events (https://aurelia.io/docs/binding/basics)
-            -->
-            <label for="query">Query</label>
-            <input id="query" value.bind="query" change.trigger="searchDocuments()" />
-            <br />
-            <label for="fields">Fields</label>
-            <input id="fields" value.bind="fields" change.trigger="searchDocuments()" />
-            <br />
-            <label for="docId">Document ID</label>
-            <input id="docId" value.bind="docId" change.trigger="getDocumentById()" />
-            <br />
-
-            <!--
-                Our prettified text to show the response from the server
-            -->
-            <pre>${metadataResponse}</pre>
+    <header class="etrieve-header action">
+        <div class="bar">
+            <div class="bar-left">
+                <inline-svg svg="resources/images/svg/EtrieveUniversitySigil"></inline-svg>
+            </div>
+            <div class="bar-center">
+                <div class="brand">Etrieve University</div>
+            </div>
         </div>
+    </header>
+    <section class="app-container">
 
-        <div class="viewer">
-            <!--
-                Here we have our Etrieve Viewer Element. We've added an ID just to help easily find it.
-            -->
-            <etrieve-viewer id="viewerElement"></etrieve-viewer>
-        </div>
+        <hero>
+            <h1>Etrieve University</h1>
+            <p>Est. 2013</p>
+        </hero>
+
+        <section class="content">
+            <side-nav></side-nav>
+            <div class="widgets">
+        
+                <article class="widget search">
+                    <h4>Search For Document</h4>
+                    <!--
+                        Here we have a few fields we use to provide some simple search capabilities.
+                        There are change events that trigger functions in our view model.
+                        Query and Fields are both tied into the same search functionality, so their change events trigger the same function.
+                        The Document ID input is tied to search specifically by a document id, and therefore has it's own trigger function.
+        
+                        The 'bind' and 'trigger' syntax are Aurelia's binding language, and provides a means to which to bind values between view and view model,
+                            as well as trigger specific functions based off change events (https://aurelia.io/docs/binding/basics)
+                    -->
+                    <div class="search-type">
+                        <label for="searchTypeQuery">Query</label>
+                        <input id="searchTypeQuery" type="radio" name="searchType" value="query" checked.bind="searchType" change.trigger="searchDocuments()"/>
+
+                        <label for="searchTypeField">Field</label>
+                        <input id="searchTypeField" type="radio" name="searchType" value="field" checked.bind="searchType" change.trigger="searchDocuments()"/>
+                    </div>
+                    <div class="search-box" if.bind="searchType === 'query'">
+                        <input id="query" value.bind="query" change.trigger="searchDocuments()" placeholder="Search" />
+                    </div>
+                    <div class="search-box" if.bind="searchType === 'field'">
+                        <label for="queryField">Field</label>
+                        <input id="queryField" value.bind="queryField" change.trigger="searchDocuments()" placeholder="Search" />
+
+                        <label for="queryFieldValue">Value</label>
+                        <input id="queryFieldValue" value.bind="queryFieldValue" change.trigger="searchDocuments()" placeholder="Search" />
+                    </div>
+                    
+                </article>
+
+                <div class="widget folder-document-viewer">
+                    <etrieve-viewer id="etrieveViewer"></etrieve-viewer>
+                </div>
+
+                <!-- <div class="widget results">
+                    <etrieve-folder-viewer id="folderViewer"></etrieve-folder-viewer>
+                </div> -->
+
+                <!-- <div class="widget viewer">
+                    <etrieve-document-viewer id="viewerElement"></etrieve-document-viewer>
+                </div> -->
+
+
+            </div>
+        </section>
+
 
     </section>
 

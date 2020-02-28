@@ -1,27 +1,32 @@
 {
   "name": "document-viewer-test-site",
   "description": "An example site to demonstrate the Etrieve Document Viewer",
-  "version": "1.0.0",
+  "version": "2.0.3",
   "repository": {
     "type": "git",
-    "url": "https://softdocs.visualstudio.com/Etrieve/_git/Etrieve-Document-Viewer-Example-Site"
+    "url": "https://softdocs.visualstudio.com/Etrieve/_git/Etrieve-Document-Viewer"
   },
   "scripts": {
     "run": "au run",
     "run-watch": "au run --watch",
     "build": "au build",
     "build-production": "au build --env prod",
-    "test": "au test --headless"
+    "test": "au test --headless",
+    "cypress:open": "cypress open"
   },
   "license": "MIT",
   "dependencies": {
     "aurelia-animator-css": "^1.0.4",
     "aurelia-bootstrapper": "^2.3.0",
     "aurelia-fetch-client": "^1.6.0",
+    "aurelia-typed-observable-plugin": "^0.4.2",
     "requirejs": "^2.3.6",
     "text": "github:requirejs/text#latest"
   },
   "peerDependencies": {},
+  "resolutions": {
+    "**/lodash": ">=4.17.15"
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
@@ -36,15 +41,17 @@
     "browser-sync": "^2.26.0",
     "connect-history-api-fallback": "^1.5.0",
     "debounce": "^1.2.0",
+    "eslint-plugin-cypress": "^2.2.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-changed-in-place": "^2.3.0",
-    "gulp-eslint": "^5.0.0",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-eslint": "^6.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-watch": "^5.0.1",
     "jasmine-core": "^3.2.1",

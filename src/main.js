@@ -8,6 +8,7 @@ import environment from './environment';
 
 export function configure(aurelia) {
     aurelia.use
+        .feature('resources')
         .standardConfiguration();
 
     aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');

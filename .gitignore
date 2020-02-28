@@ -34,3 +34,6 @@ node_modules
 
 /wwwroot/scripts
 /wwwroot/images
+
+# Test Files
+/cypress/screenshots

@@ -61,6 +61,9 @@
           "stub": true
         }
       ]
+    },
+    "copyFiles": {
+      "src/resources/images/jpg/*": "wwwroot/resources/images/jpg/"
     }
   },
   "platform": {
@@ -93,7 +96,14 @@
     "id": "sass",
     "displayName": "Sass",
     "fileExtension": ".scss",
-    "source": "src/**/*.scss"
+    "source": "src/**/*.scss",
+    "preCompiled": ["scss/**/*.scss"]
+  },
+  "svgProcessor": {
+    "id": "svg",
+    "displayName": "SVG",
+    "fileExtension": ".svg",
+    "source": "src/**/*.svg"
   },
   "editor": {
     "id": "vscode",

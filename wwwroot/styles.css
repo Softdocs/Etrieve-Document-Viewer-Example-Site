@@ -1,0 +1,75 @@
+.etrieve-header {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3rem;
+  min-height: 3rem;
+  background-color: #fff;
+  color: #373737;
+  fill: #373737;
+}
+
+.etrieve-header.action {
+  background-color: #7f4293;
+  color: #ebebeb;
+  fill: #ebebeb;
+}
+
+.etrieve-header.dark {
+  background-color: #373737;
+  color: #f5f5f5;
+  fill: #f5f5f5;
+}
+
+.etrieve-header.fixed-top {
+  position: fixed;
+}
+
+.etrieve-header .bar {
+  padding: 0 .5rem;
+}
+
+.etrieve-header .bar-left,
+.etrieve-header .bar-right,
+.etrieve-header .bar-center {
+  padding: .8rem .5rem;
+  height: 3rem;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.etrieve-header .bar-left svg,
+.etrieve-header .bar-right svg,
+.etrieve-header .bar-center svg {
+  vertical-align: baseline;
+}
+
+.etrieve-header .bar-left {
+  float: left;
+}
+
+.etrieve-header .bar-right {
+  float: right;
+}
+
+.etrieve-header .bar-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 0 3rem;
+}
+
+.etrieve-header .brand {
+  font-size: 1.25rem;
+  display: block;
+}
+
+@media (min-width: 48em) {
+  .etrieve-header .bar-center {
+    text-align: left;
+    margin: auto;
+  }
+}

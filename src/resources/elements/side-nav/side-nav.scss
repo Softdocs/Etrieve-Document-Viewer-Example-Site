@@ -1,0 +1,115 @@
+@import 'scss/variables';
+
+side-nav {
+    display: block;
+    position: relative;
+
+    background-color: $app-dark;
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        color: $off-white;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            position: relative;
+            box-sizing: border-box;
+            height: 3rem;
+            padding: 0 3rem;
+            line-height: 3rem;
+
+            border-top: 1px solid $app-gray;
+
+            transition: background-color .2s ease-in-out;
+            
+            &:last-child {
+                border-bottom: 1px solid $app-gray;
+            }
+
+            &.active {
+                background-color: $app-gray;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+
+                    border-left: .5rem solid $action;
+                    width: 1rem;
+                    height: 100%;
+                }
+            }
+
+            &:hover {
+                background-color: $app-gray;
+                border-top: 1px solid $app-dark;
+            }
+
+            svg {
+                display: inline-block;
+                fill: $accent-white;
+                position: absolute;
+                top: .7rem;
+                left: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+
+    .notifier {
+        position: absolute;
+        
+        background-color: $action-blue;
+        color: $off-white;
+
+        border-radius: 3px 3px 0 0;
+        border-top: 1px solid #425677;
+
+        bottom: 0;
+        left: .5rem;
+        right: .5rem;
+
+        h4 {
+            margin: 1rem .5rem;
+            font-weight: 400;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: .5rem .5rem .5rem 1rem;
+            margin: 0;
+            
+            font-weight: 100;
+
+            border-top: 1px solid #425677;
+
+            transition: background-color .2s ease-in-out;
+            
+            &:last-child {
+                border-bottom: 1px solid #425677;
+            }
+
+            &:hover {
+                background-color: $accent-dark-blue;
+            }
+
+            > :last-child {
+                font-size: smaller;
+                position: absolute;
+                right: .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
